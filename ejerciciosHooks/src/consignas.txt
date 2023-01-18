@@ -1,0 +1,13 @@
+Claro, aquí te presento 4 ejercicios sencillos para ayudarte a empezar a trabajar con los hooks useEffect y useState en React:
+
+1. Crea un componente de contador que incremente en 1 cada vez que se presiona un botón. Utiliza useState para mantener el estado del contador y useEffect para actualizar el título de la página con el valor del contador.
+
+2. Crea un componente de reloj que muestre la hora actual. Utiliza useState para mantener el estado de la hora actual y useEffect para actualizar la hora cada segundo.
+
+3. Crea un componente de formulario que permita al usuario ingresar su nombre y guardarlo en el estado del componente. Utiliza useState para mantener el estado del nombre y useEffect para guardar el nombre en el almacenamiento local del navegador.
+
+4. Crea un componente de lista de tareas que permita al usuario agregar y eliminar tareas. Utiliza useState para mantener el estado de la lista de tareas y useEffect para guardar la lista en el almacenamiento local del navegador.
+
+Espero que estos ejercicios te ayuden a comprender mejor cómo funcionan los hooks useEffect y useState. Si tienes alguna duda, no dudes en preguntar.
+
+By ChatGPT.
