@@ -1,3 +1,24 @@
 body {
+  padding: 3rem;
   background-color: darkgray;
+  color: black;
+  font-size: 3rem;
+  /* line-height: 1rem; */
+}
+
+button {
+  background-color: beige;
+  padding: 0.5em;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+button:hover {
+  cursor: pointer;
+}
+
+input {
+  background-color: white;
+  border: 3px solid black;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
 }
