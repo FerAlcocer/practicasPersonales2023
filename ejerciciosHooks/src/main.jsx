@@ -6,10 +6,11 @@ import "./estilos/css/pruebas.css";
 
 // import { Contador } from "./01-Contador";
 // import { Reloj } from "./02-Reloj";
-import { Formulario } from "./03-Formulario";
+// import { EncenderApagar } from "./04-encenderApagar";
+import { Likes } from "./05-Likes";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Formulario />
+    <Likes />
   </React.StrictMode>
 );
