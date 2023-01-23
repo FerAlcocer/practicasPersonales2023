@@ -1,0 +1,43 @@
+import { useMemo, useRef, useState } from "react";
+
+export const BuscadorLista = () => {
+  const [items, setItems] = useState([]);
+  const [query, setQuery] = useState("");
+  const inputRef = useRef();
+
+  const filteredItems = useMemo(() => {
+    return items.filter((item) => {
+      return item.toLowerCase().includes(query.toLowerCase());
+    });
+  }, [items, query]);
+
+  function onSubmit(e) {
+    e.preventDefault();
+
+    const value = inputRef.current.value;
+    if (value === "") return;
+    setItems((prev) => {
+      return [...prev, value];
+    });
+    inputRef.current.value = "";
+  }
+
+  return (
+    <>
+      Buscador:
+      <input
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+        type="search"
+      />
+      <form onSubmit={onSubmit}>
+        Nuevo Item: <input ref={inputRef} type="text" />
+        <button>Add</button>
+      </form>
+      <h3>Items:</h3>
+      {filteredItems.map((item) => (
+        <div>{item}</div>
+      ))}
+    </>
+  );
+};
