@@ -10,7 +10,7 @@ export const ListaTareas = () => {
         return [...state, { id: state.lenght, title: action.title }];
       }
       case "remove_tarea": {
-        return state.filter((tarea, inde) => inde != action.inde);
+        return state.filter((tarea, index) => index != action.index);
       }
       default: {
         return state;
