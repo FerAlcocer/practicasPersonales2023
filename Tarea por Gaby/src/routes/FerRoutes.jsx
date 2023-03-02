@@ -1,5 +1,5 @@
 import { Navigate, Route, Routes } from "react-router-dom";
-import { AboutPage, BlogPage } from "../pages";
+import { AboutPage, BlogPage, Home } from "../pages";
 import { Navbar } from "../ui";
 
 export const FerRoutes = () => {
@@ -10,7 +10,7 @@ export const FerRoutes = () => {
         <Routes>
           <Route path="about" element={<AboutPage />} />
           <Route path="blog" element={<BlogPage />} />
-          {/* <Route path="home" element={<Navigate to="/" />} /> */}
+          <Route path="home" element={<Home />} />
 
           <Route path="/" element={<Navigate to="home" />} />
         </Routes>

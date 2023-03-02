@@ -1,6 +1,9 @@
+import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
 export const Navbar = () => {
+  const [usuario, setUsuario] = useState("Carlos");
+
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
@@ -64,19 +67,31 @@ export const Navbar = () => {
                 </Link>
                 <ul className="dropdown-menu">
                   <li>
-                    <Link className="dropdown-item" to="#">
+                    <button
+                      className="dropdown-item"
+                      to="#"
+                      // onClick={setUsuario("Fernando")}
+                    >
                       Fernando
-                    </Link>
+                    </button>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="#">
+                    <button
+                      className="dropdown-item"
+                      to="#"
+                      // onClick={setUsuario("Gaby")}
+                    >
                       Gaby
-                    </Link>
+                    </button>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="#">
+                    <button
+                      className="dropdown-item"
+                      to="#"
+                      // onClick={setUsuario("Guest")}
+                    >
                       Guest
-                    </Link>
+                    </button>
                   </li>
                 </ul>
               </li>
@@ -85,29 +100,10 @@ export const Navbar = () => {
 
           <div className="navbar-collapse collapse w-50 order-3 dual-collapse2 d-flex justify-content-end">
             <ul className="navbar-nav ml-auto">
-              <span className="nav-item nav-link text-primary">
-                {/* {user?.name} */}
-                (usuario)
-              </span>
+              <span className="nav-item nav-link text-primary">{usuario}</span>
             </ul>
           </div>
         </div>
-
-        {/* FUTURA BARRA DE BUSQUEDAS */}
-
-        {/* <div className="container-fluid flex-end">
-            <form className="d-flex" role="search">
-              <input
-                className="form-control me-2 "
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              ></input>
-              <button className="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
-          </div> */}
       </nav>
     </>
   );
