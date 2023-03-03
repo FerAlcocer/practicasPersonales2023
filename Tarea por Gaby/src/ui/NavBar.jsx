@@ -1,9 +1,7 @@
-import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-
+import { HandleUser } from "./SetUser";
+const usuario = "carlos";
 export const Navbar = () => {
-  const [usuario, setUsuario] = useState("Carlos");
-
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
@@ -55,46 +53,7 @@ export const Navbar = () => {
                   Blog
                 </NavLink>
               </li>
-              <li className="nav-item dropdown">
-                <Link
-                  className="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Usuarios
-                </Link>
-                <ul className="dropdown-menu">
-                  <li>
-                    <button
-                      className="dropdown-item"
-                      to="#"
-                      // onClick={setUsuario("Fernando")}
-                    >
-                      Fernando
-                    </button>
-                  </li>
-                  <li>
-                    <button
-                      className="dropdown-item"
-                      to="#"
-                      // onClick={setUsuario("Gaby")}
-                    >
-                      Gaby
-                    </button>
-                  </li>
-                  <li>
-                    <button
-                      className="dropdown-item"
-                      to="#"
-                      // onClick={setUsuario("Guest")}
-                    >
-                      Guest
-                    </button>
-                  </li>
-                </ul>
-              </li>
+              <SetUser />
             </ul>
           </div>
 
