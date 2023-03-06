@@ -1,7 +1,9 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { HandleUser } from "./SetUser";
-const usuario = "carlos";
+import { UserContext } from "../context/UserContext";
+import { SetUser } from "./SetUser";
 export const Navbar = () => {
+  const dataUsuario = useContext(UserContext);
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
@@ -9,7 +11,6 @@ export const Navbar = () => {
           <Link className="navbar-brand" to="/">
             LasPracticas de ...
           </Link>
-
           <button
             className="navbar-toggler"
             type="button"
@@ -56,10 +57,11 @@ export const Navbar = () => {
               <SetUser />
             </ul>
           </div>
-
           <div className="navbar-collapse collapse w-50 order-3 dual-collapse2 d-flex justify-content-end">
             <ul className="navbar-nav ml-auto">
-              <span className="nav-item nav-link text-primary">{usuario}</span>
+              <span className="nav-item nav-link text-primary">
+                {dataUsuario.nombre}
+              </span>
             </ul>
           </div>
         </div>

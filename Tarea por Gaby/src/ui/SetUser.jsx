@@ -1,9 +1,16 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { getUserByName } from "../Usuarios/helpers/getUserByName";
 
-export const SetUser = () => {
-  const [usuario, setUsuario] = useState("Carlos");
+export const SetUser = ({}) => {
+  const [usuarioActual, setUsuarioActual] = useState({});
+  const onSetUser = (nombre) => {
+    const u = getUserByName(nombre);
+    setUsuarioActual(u);
 
+    return;
+  };
+  console.log(usuarioActual);
   return (
     <>
       <li className="nav-item dropdown">
@@ -21,7 +28,7 @@ export const SetUser = () => {
             <button
               className="dropdown-item"
               to="#"
-              onClick={() => setUsuario("Fernando")}
+              onClick={() => onSetUser("Fernando")}
             >
               Fernando
             </button>
@@ -30,7 +37,7 @@ export const SetUser = () => {
             <button
               className="dropdown-item"
               to="#"
-              onClick={() => setUsuario("Gaby")}
+              onClick={() => onSetUser("Gabriel")}
             >
               Gaby
             </button>
@@ -39,7 +46,7 @@ export const SetUser = () => {
             <button
               className="dropdown-item"
               to="#"
-              onClick={() => setUsuario("Guest")}
+              onClick={() => onSetUser("Guest")}
             >
               Guest
             </button>

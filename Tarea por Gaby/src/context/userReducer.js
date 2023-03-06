@@ -1,1 +1,3 @@
-export const userReducer = (state = {}, action) => {};
+export const userReducer = (state = {}, action) => {
+  // switch()
+};

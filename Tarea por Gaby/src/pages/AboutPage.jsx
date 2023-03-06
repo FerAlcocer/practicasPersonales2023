@@ -1,13 +1,14 @@
+import { useContext } from "react";
+import { UserProvider } from "../context/UserProvider";
+import { SetUser } from "../ui";
+
 export const AboutPage = () => {
+  // const dataUsuario = useContext(UserProvider);
+  // const { nombre, descripcion } = dataUsuario;
   return (
     <>
-      <h1>About (usuario) ....</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
-        quia neque reprehenderit dolore ab officia amet sequi aperiam nam
-        tempora magni aspernatur, minima vitae pariatur molestiae ipsa dolorem
-        explicabo impedit.
-      </p>
+      <h1>About ....</h1>
+      <p>descripcion</p>
     </>
   );
 };

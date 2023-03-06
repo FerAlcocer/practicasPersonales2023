@@ -1,5 +1,12 @@
+import { usuario } from "../Usuarios/data/usuarios";
 import { UserContext } from "./UserContext";
 
-export const UserProvider = ({ children }) => {
-  return <UserContext.Provider value={{}}>{children}</UserContext.Provider>;
+export const UserProvider = (props) => {
+  const dataUsuario = usuario;
+
+  return (
+    <UserContext.Provider value={dataUsuario}>
+      {props.children}
+    </UserContext.Provider>
+  );
 };

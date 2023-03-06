@@ -1,6 +1,6 @@
 export const usuario = [
   {
-    id: "Gabriel",
+    nombre: "Gabriel",
     apodo: "Gaybi",
     descripcion:
       "Gabriel es un programador argentino que actualmente reside en Italia. Desde hace un año, trabaja como programador en una empresa de tecnología en la ciudad de Milán. Gabriel es un apasionado de la tecnología y la programación, y está constantemente buscando formas de mejorar sus habilidades y conocimientos. Es un trabajador dedicado y comprometido con su trabajo, y siempre se esfuerza por lograr los mejores resultados. En su tiempo libre, le gusta explorar la ciudad, aprender sobre la cultura italiana y viajar por Europa.",
@@ -22,7 +22,7 @@ export const usuario = [
     ],
   },
   {
-    id: "Fernando",
+    nombre: "Fernando",
     apodo: "Fer",
     descripcion:
       "Fernando es un joven argentino que ha estado estudiando programación durante los últimos seis meses. Tiene una gran pasión por la tecnología y la programación, y está decidido a hacer carrera en esta industria. Fernando es un estudiante dedicado y comprometido, siempre buscando nuevas formas de mejorar sus habilidades y conocimientos. Su objetivo a corto plazo es conseguir un trabajo como programador en Europa, donde pueda seguir desarrollando sus habilidades y explorando nuevas oportunidades.",
@@ -44,7 +44,7 @@ export const usuario = [
     ],
   },
   {
-    id: "Guest",
+    nombre: "Guest",
     apodo: "",
     descripcion: "",
     nacionalidad: "",
