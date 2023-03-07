@@ -1,9 +1,11 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { UserContext } from "../context/UserContext";
+import { usuario } from "../Usuarios/data/usuarios";
 import { SetUser } from "./SetUser";
 export const Navbar = () => {
-  const dataUsuario = useContext(UserContext);
+  const { usuarioActual } = useContext(UserContext);
+  console.log(usuarioActual.nombre);
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
@@ -60,7 +62,7 @@ export const Navbar = () => {
           <div className="navbar-collapse collapse w-50 order-3 dual-collapse2 d-flex justify-content-end">
             <ul className="navbar-nav ml-auto">
               <span className="nav-item nav-link text-primary">
-                {dataUsuario.nombre}
+                {usuarioActual.nombre}
               </span>
             </ul>
           </div>

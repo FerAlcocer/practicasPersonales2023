@@ -1,11 +1,11 @@
-import { usuario } from "../Usuarios/data/usuarios";
+import { useState } from "react";
 import { UserContext } from "./UserContext";
 
 export const UserProvider = (props) => {
-  const dataUsuario = usuario;
+  const [usuarioActual, setUsuarioActual] = useState({});
 
   return (
-    <UserContext.Provider value={dataUsuario}>
+    <UserContext.Provider value={{ usuarioActual, setUsuarioActual }}>
       {props.children}
     </UserContext.Provider>
   );

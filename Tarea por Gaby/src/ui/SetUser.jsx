@@ -1,16 +1,17 @@
-import { useState } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { UserContext } from "../context/UserContext";
 import { getUserByName } from "../Usuarios/helpers/getUserByName";
 
 export const SetUser = ({}) => {
-  const [usuarioActual, setUsuarioActual] = useState({});
+  const { setUsuarioActual } = useContext(UserContext);
   const onSetUser = (nombre) => {
     const u = getUserByName(nombre);
     setUsuarioActual(u);
 
     return;
   };
-  console.log(usuarioActual);
+  // console.log(usuarioActual);
   return (
     <>
       <li className="nav-item dropdown">

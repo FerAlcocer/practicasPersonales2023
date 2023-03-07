@@ -1,15 +1,28 @@
+import { useContext } from "react";
+import { UserContext } from "../context/UserContext";
+
 export const BlogPage = () => {
+  const { usuarioActual } = useContext(UserContext);
+
+  const { objetivos, logros } = usuarioActual;
+  console.log(objetivos);
+  const NumerarLogros = () => {
+    for (let i = 0; i <= objetivos.length; i++) {
+      <li>{usuarioActual.objetivos[i]}</li>;
+      return;
+    }
+  };
+  console.log(NumerarLogros);
   return (
     <>
       <h1>Blog Objetivos logrados</h1>
       <ol>
-        <li>(objetivo logrado) :</li>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure eveniet
-          obcaecati ipsam repellendus qui itaque ad labore consequuntur quaerat.
-          Minima eos autem error, tempora officiis assumenda ducimus quo modi
-          perferendis!
-        </p>
+        {/* <NumerarLogros /> */}
+        <li>{usuarioActual.logros} :</li>
+      </ol>
+      <h1>Metas</h1>
+      <ol>
+        <li>{usuarioActual.objetivos}</li>
       </ol>
     </>
   );
