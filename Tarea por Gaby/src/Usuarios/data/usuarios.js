@@ -8,10 +8,10 @@ export const usuario = [
     ubicacion: "Italia",
     objetivos: [
       "Desarrollar habilidades de programación avanzadas en diferentes lenguajes",
-      "[Participar en proyectos de programación de mayor envergadura",
-      "[Ampliar su red de contactos en la industria de la tecnología en Italia y Europa",
-      "[Aprender un nuevo idioma para mejorar su comunicación con clientes y colegas",
-      "[Desarrollar su propio proyecto de programación y lanzarlo al mercado",
+      "Participar en proyectos de programación de mayor envergadura",
+      "Ampliar su red de contactos en la industria de la tecnología en Italia y Europa",
+      "Aprender un nuevo idioma para mejorar su comunicación con clientes y colegas",
+      "Desarrollar su propio proyecto de programación y lanzarlo al mercado",
     ],
     logros: [
       "Diseño e implementación de un nuevo sistema de seguimiento de inventario que mejoró la eficiencia en un 30%",

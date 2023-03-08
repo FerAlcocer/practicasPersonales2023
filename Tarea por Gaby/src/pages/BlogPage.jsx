@@ -5,25 +5,22 @@ export const BlogPage = () => {
   const { usuarioActual } = useContext(UserContext);
 
   const { objetivos, logros } = usuarioActual;
-  console.log(objetivos);
-  const NumerarLogros = () => {
-    for (let i = 0; i <= objetivos.length; i++) {
-      <li>{usuarioActual.objetivos[i]}</li>;
-      return;
-    }
-  };
-  console.log(NumerarLogros);
+  let listaObjetivos = [];
+  let listaLogros = [];
+
+  if (objetivos && objetivos !== undefined) {
+    listaObjetivos = objetivos.map((objetivo) => <li>{objetivo}</li>);
+  }
+  if (logros && logros !== undefined) {
+    listaLogros = logros.map((logro) => <li>{logro}</li>);
+  }
+
   return (
     <>
       <h1>Blog Objetivos logrados</h1>
-      <ol>
-        {/* <NumerarLogros /> */}
-        <li>{usuarioActual.logros} :</li>
-      </ol>
+      <ol>{listaObjetivos}</ol>
       <h1>Metas</h1>
-      <ol>
-        <li>{usuarioActual.objetivos}</li>
-      </ol>
+      <ol>{listaLogros}</ol>
     </>
   );
 };
